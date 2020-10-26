@@ -184,4 +184,5 @@ def big_shoe_rebounds()
       end
     end
   end
+  get_player(player_big_shoe)[:rebounds]
 end
