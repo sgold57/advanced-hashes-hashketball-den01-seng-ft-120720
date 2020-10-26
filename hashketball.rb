@@ -180,7 +180,6 @@ def big_shoe_rebounds()
       if key[:shoe] > big_shoe
         player_big_shoe = key[:player_name]
         big_shoe = key[:shoe]
-        binding.pry
       end
     end
   end
