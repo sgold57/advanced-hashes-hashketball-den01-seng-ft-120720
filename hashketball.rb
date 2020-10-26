@@ -177,9 +177,9 @@ def big_shoe_rebounds()
   big_shoe = 0
   game_hash.each do |h_or_a, specs|
     specs[:players].each do |key|
-      if specs[:players][:shoe] > big_shoe
-        player_big_shoe = specs[:player][:player_name]
-        big_shoe = specs[:players][:shoe]
+      if key[:shoe] > big_shoe
+        player_big_shoe = key[:player_name]
+        big_shoe = key[:shoe]
         binding.pry
       end
     end
