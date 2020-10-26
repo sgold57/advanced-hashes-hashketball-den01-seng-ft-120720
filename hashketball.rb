@@ -172,8 +172,15 @@ def player_stats(player)
   get_player(player)
 end
 
-#game_hash.each do |h_or_a, specs|
-#  specs[:players].each do |key|
-#    if key[:player_name] == player
-#      return key[:points]
-#
+def big_shoe_rebounds()
+  player_big_shoe = ""
+  big_shoe = 0
+  game_hash.each do |h_or_a, specs|
+    specs[:players].each do |key|
+      if specs[:players][:shoe] > big_shoe
+        player_big_shoe = specs[:player][:player_name]
+        big_shoe = specs[:players][:shoe]
+      end
+    end
+  end
+end
